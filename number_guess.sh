@@ -1,16 +1,15 @@
 #!/bin/bash
 
+NUMBER=$((1 + $RANDOM % 100))
+echo $NUMBER
+
 echo -e "Enter your username:"
 read USERNAME
 
-NUMBER=$((1 + RANDOM % 100))
+function display_user_info {
+  local user_name=$1
+  local games_played=$2
+  local best_game=$3
 
-if [ ${#USERNAME} -le 22];
-then
-  # echo accepted
-  echo accepted
-
-else
-  # echo is not accpted
-  exit 1
-fi
+  echo "Welcome back, $user_name! You have played $games_played games, and your best game took $best_game guesses."
+}
