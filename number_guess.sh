@@ -1,6 +1,6 @@
 #!/bin/bash
 
-NUMBER=$((1 + $RANDOM % 100))
+NUMBER=$((1 + $RANDOM % 1000))
 echo $NUMBER
 
 echo -e "Enter your username:"
